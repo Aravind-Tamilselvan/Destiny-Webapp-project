@@ -19,7 +19,7 @@ import Details from './components/package-details/Details';
 import TestimonialPage from './components/TestimonialPage';
 import AuthPage from './pages/authentication/AuthPage';
 import OrderConfirm from './pages/booking/OrderConfirm';
-import ChatBot from './components/chatBot';
+import ChatBot from './components/ChatBot';
 
 
 function App() {
