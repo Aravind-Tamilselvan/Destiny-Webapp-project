@@ -157,7 +157,7 @@ const Booking = () => {
                             </div>
                             
                             <div class="checkbox-wrapper-3">
-                                <input type="checkbox" id="cbx-3" onChange={handleAmount}/>
+                                <input type="checkbox" id="pay-as-you-travel" onChange={handleAmount}/>
                                 <label for="cbx-3" class="toggle"><span></span></label>
                             </div>
                         </div>
@@ -165,7 +165,7 @@ const Booking = () => {
                         <div className='doorstep-checkbox'>
                             <label>Doorstep Pickup</label>
                             <div class="checkbox-wrapper-3">
-                                <input type="checkbox" id="cbx-3" onChange={handleLocationChange} checked={doorstep} />
+                                <input type="checkbox" id="doorstep-pickup" onChange={handleLocationChange} checked={doorstep} />
                                 <label for="cbx-3" class="toggle"><span></span></label>
                             </div>
                         </div>

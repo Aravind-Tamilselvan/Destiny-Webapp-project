@@ -1105,18 +1105,35 @@
     pointer-events: none;
 }
 
-.checkbox-wrapper-3 #cbx-3:checked+.toggle:before {
+.checkbox-wrapper-3 #pay-as-you-travel:checked+.toggle:before {
     background: var(--primary--color--lowered);
 }
 
-.checkbox-wrapper-3 #cbx-3:checked+.toggle span {
+.checkbox-wrapper-3 #pay-as-you-travel:checked+.toggle span {
     background: var(--primary--color--);
     transform: translateX(20px);
     transition: all 0.2s cubic-bezier(0.8, 0.4, 0.3, 1.25), 0.15s ease;
     box-shadow: 0 3px 8px rgba(79, 46, 220, 0.2);
 }
 
-.checkbox-wrapper-3 #cbx-3:checked+.toggle span:before {
+.checkbox-wrapper-3 #pay-as-you-travel:checked+.toggle span:before {
+    transform: scale(1);
+    opacity: 0;
+    transition: all 0.4s ease;
+}
+
+.checkbox-wrapper-3 #doorstep-pickup:checked+.toggle:before {
+    background: var(--primary--color--lowered);
+}
+
+.checkbox-wrapper-3 #doorstep-pickup:checked+.toggle span {
+    background: var(--primary--color--);
+    transform: translateX(20px);
+    transition: all 0.2s cubic-bezier(0.8, 0.4, 0.3, 1.25), 0.15s ease;
+    box-shadow: 0 3px 8px rgba(79, 46, 220, 0.2);
+}
+
+.checkbox-wrapper-3 #doorstep-pickup:checked+.toggle span:before {
     transform: scale(1);
     opacity: 0;
     transition: all 0.4s ease;
