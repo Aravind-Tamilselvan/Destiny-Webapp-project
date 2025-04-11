@@ -7,6 +7,15 @@
     color: #06b6d4 !important;
 }
 
+.css-jkmkwa {
+    position: absolute;
+    height: 2px;
+    bottom: 0px;
+    width: 100%;
+    background-color: #06b6d4 !important;
+    transition: 300ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 .css-1qltlow-MuiTabs-indicator {
     position: absolute;
     height: 2px;
