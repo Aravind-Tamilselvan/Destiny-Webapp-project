@@ -1,0 +1,210 @@
+@media only screen and (max-width : 600px) {
+    .Navbar {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 90vw;
+        height: max-content;
+        padding-bottom: 15px;
+    }
+
+    .logo img {
+        height: 90px;
+        width: 160px;
+    }
+
+    /* .nav-items{
+        display: flex;
+    } */
+
+    .nav-links {
+        font-size: 12px;
+    }
+
+    .profile-access {
+        display: none;
+    }
+
+    /* Main content */
+    .main-content {
+        height: 100%;
+        width: 100%;
+        margin-bottom: 0;
+        overflow: hidden;
+    }
+
+    .main-content h1 {
+        font-size: 24px !important;
+    }
+
+    /* HomePage */
+
+    .Homepage .slider-section {
+        height: 250px;
+
+        h1 {
+            font-size: 16px !important;
+            text-align: center;
+        }
+    }
+
+    .Homepage .popular-packages-section {
+        height: 50vh;
+        width: 95%;
+
+        h2 {
+            font-size: 14px;
+        }
+    }
+
+    .Homepage .reason {
+        height: max-content;
+        margin-bottom: 40px;
+    }
+
+    .Homepage .reason .cards .reason-card {
+        height: 150px;
+        width: 150px;
+        border-radius: 100%;
+        padding: 25px;
+        animation: Scrollanime 0.5s ease-in-out;
+        animation-timeline: view(700px 10px);
+        animation-fill-mode: forwards;
+
+        h2 {
+            font-size: 16px;
+        }
+
+        p {
+            font-size: 12px;
+        }
+    }
+
+    .Homepage .reason .cards .reason-card:nth-child(odd) {
+        transform: translateX(-500px);
+        opacity: 0;
+    }
+
+    .Homepage .reason .cards .reason-card:nth-child(even) {
+        transform: translateX(500px);
+        opacity: 0;
+    }
+
+    @keyframes Scrollanime {
+        to {
+            transform: translateX(0);
+            opacity: 1;
+        }
+    }
+
+    .Homepage .reason .cards .reason-card svg {
+        font-size: 30px;
+    }
+
+    .Homepage .reason .cards {
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+    }
+
+    .Homepage .about-section {
+        height: max-content;
+        margin-bottom: 40px;
+    }
+
+    .Homepage .about-section p {
+        font-size: 12px;
+        padding: 0 20px;
+    }
+
+    /* Adventure page */
+    .Adventure {
+        height: 100%;
+        width: 100%;
+    }
+
+    .Adventure .slider-section {
+        height: 250px;
+    }
+
+    .Adventure .packages {
+        height: 100%;
+        margin: 50px 0 100px 0;
+    }
+
+    .Adventure .packages .package-card {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .card {
+        height: 350px;
+    }
+
+
+    .css-hzcega-MuiTabs-list button {
+        margin-top: 30px;
+        font-size: 12px;
+    }
+
+    /* Details page */
+    .Details-slider-section .Details-mySwiper {
+        height: 50vh !important;
+    }
+
+    .package-details>div {
+        font-size: 8px;
+        gap: 10px !important;
+
+        svg {
+            font-size: 20px !important;
+        }
+    }
+
+    .package-details .package-itenery h1 {
+        font-size: 10px;
+    }
+
+    /* Review container */
+    .review-container .form-container {
+        width: 75% !important;
+    }
+
+    /* Testimonial page */
+
+    .testimonialPage-container {
+        height: 50% !important;
+        width: 95% !important;
+        font-size: 12px !important;
+
+        h1 {
+            font-size: 18px !important;
+        }
+    }
+
+    .testimonialPage-review {
+        gap: 20px !important;
+    }
+
+    /* booking container */
+    .booking-container {
+        width: 90% !important;
+    }
+
+    /* chatbox */
+    .chatbox {
+        right: 20px !important;
+    }
+
+    footer {
+        height: 5vh;
+    }
+
+    .footer-content {
+        display: none;
+    }
+
+    .footer-copyright {
+        font-size: 10px;
+    }
+}

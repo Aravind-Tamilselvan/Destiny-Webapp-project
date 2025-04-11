@@ -1,0 +1,27 @@
+.css-hzcega-MuiTabs-list {
+    display: flex;
+    justify-content: center;
+}
+
+.css-1usuzwp-MuiButtonBase-root-MuiTab-root.Mui-selected {
+    color: #06b6d4 !important;
+}
+
+.css-1qltlow-MuiTabs-indicator {
+    position: absolute;
+    height: 2px;
+    bottom: 0;
+    width: 100%;
+    -webkit-transition: all 300mscubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    transition: all 300mscubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    background-color: #06b6d4 !important;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+    color: #06b6d4 !important;
+}
+
+.swiper-pagination-bullet-active {
+    background-color: #06b6d4 !important;
+}
