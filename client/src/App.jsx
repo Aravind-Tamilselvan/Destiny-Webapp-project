@@ -2,7 +2,7 @@ import './App.css';
 import './responsive.css'
 import './pages/ui.css'
 import './pages/authentication/auth.css'
-import { Routes, Route, Navigate} from 'react-router-dom';
+import { Routes, Route, Navigate } from 'react-router-dom';
 import { Toaster } from 'react-hot-toast';
 import useUser from './hooks/useUser';
 
@@ -23,7 +23,7 @@ import ChatBot from './components/ChatBot';
 
 
 function App() {
-  const {user} =useUser()
+  const { user } = useUser()
   return (
     <div className="App">
       <div className='background-gradient'>
@@ -43,11 +43,11 @@ function App() {
           <Route path="/packages/:id" element={user ? <Details /> : <Navigate to="/authentication" />} />
           <Route path="/Testimonial-page/:packageId/:id" element={user ? <TestimonialPage /> : <Navigate to="/authentication" />} />
           <Route path="/packages/:packageId/:id/booking" element={user ? <Booking /> : <Navigate to="/authentication" />} />
-          <Route path="/booking-success" element={user ? <OrderConfirm /> : <Navigate to="/authentication" />} />
+          <Route path="/booking-success" element={user === undefined ? (<p style={{display:"flex",alignItems:"center",justifyContent:"center"}}>Loading...</p> ) : user ? ( <OrderConfirm /> ) : ( <Navigate to="/authentication" />)} />
           <Route path="/booking-cancel" element={<Navigate to="/" />} />
         </Routes>
       </div>
-      {user && <ChatBot/>}
+      {user && <ChatBot />}
       {/* Footer */}
       {user && <Footer />}
       <Toaster />

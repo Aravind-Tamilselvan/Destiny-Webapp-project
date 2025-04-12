@@ -29,7 +29,7 @@ const AuthPage = () => {
                     <LoginPage />
                 </CustomTabPanel>
             </Box>
-            <p style={{ position: "absolute", bottom: "0", right: "50%", transform: "translateX(50%)" }}>Copyrights belongs to Aravind <br></br>For demo use account email:demo@gmail.com password:demo@123</p>
+            <p style={{ position: "absolute", bottom: "0", right: "50%", transform: "translateX(50%)", textAlign : "center" }}>Copyrights belongs to Aravind, For demo use account<br></br> email:demo@gmail.com password:demo@123</p>
         </div>
     )
 }
