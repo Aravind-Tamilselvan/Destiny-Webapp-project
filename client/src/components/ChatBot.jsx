@@ -102,7 +102,7 @@ const ChatBot = () => {
                 <div className="chatbox__support" ref={chatboxRef}>
                     <div className="chatbox__header">
                         <div className="chatbox__image--header">
-                            <img src="https://res.cloudinary.com/dkfrxnaud/image/upload/v1742718162/WhatsApp_Image_2025-03-23_at_13_34_44_3c46ab4e-photoaidcom-cropped-removebg-preview-photoaidcom-cropped-photoaidcom-cropped_jivyig.png" alt="image" />
+                            <img src="/assets/chatbot.jpg" alt="image" />
                         </div>
                         <div className="chatbox__content--header">
                             <h4 className="chatbox__heading--header">Chat support</h4>
