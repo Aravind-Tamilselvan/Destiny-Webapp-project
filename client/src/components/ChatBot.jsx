@@ -102,7 +102,7 @@ const ChatBot = () => {
                 <div className="chatbox__support" ref={chatboxRef}>
                     <div className="chatbox__header">
                         <div className="chatbox__image--header">
-                            <img src="/assets/chatbot.jpg" alt="image" />
+                            <img src="/assets/chatbot-modified.png" alt="image" />
                         </div>
                         <div className="chatbox__content--header">
                             <h4 className="chatbox__heading--header">Chat support</h4>
