@@ -14,7 +14,7 @@ const AuthPage = () => {
     return (
         <div className='auth-page'>
             <div className='auth-logo'>
-                <img src={'assets/GoTo.png'} alt='logo' style={{ height: "150px" }} />
+                <img src={'assets/Destiny.jpg'} alt='logo' style={{ height: "150px" }} />
             </div>
             <Box width={"100%"} marginTop={"60px"}>
                 <Tabs value={index} onChange={handleChange} className='tabs'>
