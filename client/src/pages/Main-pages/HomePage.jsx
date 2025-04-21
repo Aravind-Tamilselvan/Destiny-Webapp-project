@@ -127,7 +127,7 @@ const HomePage = () => {
             {/* About Us */}
             <section className='about-section'>
                 <h1>About us</h1>
-                <p><span>Go</span><span>To</span> is a next-generation travel booking app startup designed to provide a seamless and personalized travel experience. Unlike traditional travel platforms, we introduce three standout features:
+                <p><span>D</span><span>ESTINY</span> is a next-generation travel booking app startup designed to provide a seamless and personalized travel experience. Unlike traditional travel platforms, we introduce three standout features:
 
                     Pay as You Travel – Users only pay for the days they actually travel and stay within the package, with flexibility to extend or shorten their trip.
                     Doorstep Pickup and Drop – Ensuring hassle-free transportation, this feature offers personalized pickup from the user’s location to the trip’s starting point and back.
