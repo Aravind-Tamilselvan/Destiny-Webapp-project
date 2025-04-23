@@ -36,7 +36,7 @@ const ChatBot = () => {
             const response = await  fetch("https://openrouter.ai/api/v1/chat/completions", {
                 method: "POST",
                 headers: {
-                    Authorization: `Bearer ${import.meta.env.CHATBOT_API_KEY}`,
+                    Authorization: `Bearer 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`,
                     "Content-Type": "application/json",
                 },
                 body: JSON.stringify({
