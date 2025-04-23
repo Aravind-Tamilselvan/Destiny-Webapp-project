@@ -14,7 +14,7 @@ const ChatBot = () => {
     const chatboxRef = useRef(null)
     const inputRef = useRef(null)
 
-    useEffect(()=>{
+    useEffect(() => {
         if (messages.length === 0) {
             const welcomeMessage = {
                 name: "Abimanyu",
@@ -22,9 +22,9 @@ const ChatBot = () => {
             };
             setMessages([welcomeMessage]);
         }
-    },[])
+    }, [])
 
-    const handleMessage = async() => {
+    const handleMessage = async () => {
         const text = inputRef.current.value;
         if (!text) return;
 
@@ -33,10 +33,10 @@ const ChatBot = () => {
         inputRef.current.value = "";
 
         try {
-            const response = await  fetch("https://openrouter.ai/api/v1/chat/completions", {
+            const response = await fetch("https://openrouter.ai/api/v1/chat/completions", {
                 method: "POST",
                 headers: {
-                    Authorization: `Bearer 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`,
+                    Authorization: `Bearer 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`,
                     "Content-Type": "application/json",
                 },
                 body: JSON.stringify({
@@ -49,7 +49,7 @@ const ChatBot = () => {
                     ]
                 })
             });
-    
+
 
             if (!response.ok) {
                 const errorText = await response.text(); // to debug non-JSON error
@@ -58,10 +58,10 @@ const ChatBot = () => {
             }
 
             const res = await response.json();
-            console.log("Chatbot response ",res)
+            console.log("Chatbot response ", res)
 
-            const botMessage =
-                res.choices?.[0]?.message?.content ||
+            const chatResponse = res.choices?.[0]?.message?.content
+            const botMessage = chatResponse ||
                 "Sorry, I couldn't generate a response.";
 
             const newBotMessage = { name: "Abimanyu", message: botMessage };
