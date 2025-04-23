@@ -33,22 +33,23 @@ const ChatBot = () => {
         inputRef.current.value = "";
 
         try {
-            const response = awaitfetch("https://openrouter.ai/api/v1/chat/completions", {
+            const response = await  fetch("https://openrouter.ai/api/v1/chat/completions", {
                 method: "POST",
                 headers: {
-                  "Authorization": "Bearer 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",
-                  "Content-Type": "application/json"
+                    Authorization: `Bearer ${import.meta.env.CHATBOT_API_KEY}`,
+                    "Content-Type": "application/json",
                 },
                 body: JSON.stringify({
-                  "model": "deepseek/deepseek-r1-zero:free",
-                  "messages": [
-                    {
-                      "role": "user",
-                      "content": [{text}]
-                    }
-                  ]
+                    model: "deepseek/deepseek-r1-zero:free",
+                    messages: [
+                        {
+                            role: "user",
+                            content: text
+                        }
+                    ]
                 })
-              });
+            });
+    
 
             if (!response.ok) {
                 const errorText = await response.text(); // to debug non-JSON error
