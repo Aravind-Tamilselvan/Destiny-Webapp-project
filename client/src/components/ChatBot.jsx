@@ -33,20 +33,22 @@ const ChatBot = () => {
         inputRef.current.value = "";
 
         try {
-            const response = await fetch(
-                `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${import.meta.env.VITE_GEMINI_API_KEY}`,
-                {
-                    method: "POST",
-                    headers: { "Content-Type": "application/json" },
-                    body: JSON.stringify({
-                        contents: [
-                            {
-                                parts: [{ text }]
-                            }
-                        ]
-                    })
-                }
-            );
+            const response = awaitfetch("https://openrouter.ai/api/v1/chat/completions", {
+                method: "POST",
+                headers: {
+                  "Authorization": "Bearer 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",
+                  "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                  "model": "deepseek/deepseek-r1-zero:free",
+                  "messages": [
+                    {
+                      "role": "user",
+                      "content": [{text}]
+                    }
+                  ]
+                })
+              });
 
             if (!response.ok) {
                 const errorText = await response.text(); // to debug non-JSON error
