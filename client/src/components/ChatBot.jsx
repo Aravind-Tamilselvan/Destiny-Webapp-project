@@ -66,7 +66,7 @@ const ChatBot = () => {
             const newBotMessage = { name: "Abimanyu", message: botMessage };
             setMessages((prevMessage) => [...prevMessage, newBotMessage]);
         } catch (err) {
-            console.error("Gemini API error:", err.message);
+            console.error("CHATBOT API error:", err.message);
             const errorBotMessage = {
                 name: "Abimanyu",
                 message: "Oops! Something went wrong. Please try again later.",
