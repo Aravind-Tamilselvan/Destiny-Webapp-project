@@ -58,9 +58,10 @@ const ChatBot = () => {
             }
 
             const res = await response.json();
+            console.log("Chatbot response ",res)
 
             const botMessage =
-                res?.candidates?.[0]?.content?.parts?.[0]?.text ||
+                res.choices?.[0]?.message?.content ||
                 "Sorry, I couldn't generate a response.";
 
             const newBotMessage = { name: "Abimanyu", message: botMessage };
