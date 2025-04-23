@@ -40,7 +40,7 @@ const ChatBot = () => {
                     "Content-Type": "application/json",
                 },
                 body: JSON.stringify({
-                    model: "deepseek/deepseek-r1-zero:free",
+                    model: "deepseek/deepseek-chat-v3-0324:free",
                     messages: [
                         {
                             role: "user",
