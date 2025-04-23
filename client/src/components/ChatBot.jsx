@@ -53,7 +53,7 @@ const ChatBot = () => {
 
             if (!response.ok) {
                 const errorText = await response.text(); // to debug non-JSON error
-                console.error("Non-200 response from Gemini:", response.status, errorText);
+                console.error("Non-200 response from deepseek:", response.status, errorText);
                 throw new Error(`API error: ${response.status}`);
             }
 
