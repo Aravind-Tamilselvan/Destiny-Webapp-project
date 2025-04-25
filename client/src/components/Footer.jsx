@@ -19,7 +19,7 @@ const Footer = () => {
                 </div>
             </div>
             <div className="footer-copyright">
-                <p>It is a prototype of our final year project GoTo - "An innovative travel booking app", Done by Aravind.T </p>
+                <p>It is a prototype of our final year project Destiny - "An innovative travel booking app", Done by Aravind.T </p>
             </div>
         </footer>
     )
