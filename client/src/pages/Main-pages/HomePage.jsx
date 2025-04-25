@@ -71,7 +71,7 @@ const HomePage = () => {
                 <div className='adventures'>
                     <h2>Adventure</h2>
                     <Link to='/adventure-packages' onClick={()=>setActive("/adventure-packages")} className={active === "/adventure-packages" ? "active" : ""}>
-                        <img src='/assets/hompage/adventure.jpg' alt='adventure-picture' />
+                        <img src='https://res.cloudinary.com/dkfrxnaud/image/upload/v1745582635/adventure-min_ryok8f.jpg' alt='adventure-picture' />
                     </Link>
                     <div className='overlay'></div>
                 </div>
@@ -79,7 +79,7 @@ const HomePage = () => {
                 <div className='luxury'>
                     <h2>Luxury</h2>
                     <Link to='/luxury-packages' onClick={()=>setActive("/luxury-packages")} className={active === "/luxury-packages" ? "active" : ""}>
-                        <img src='/assets/hompage/luxury.jpg' alt='luxury-picture' />
+                        <img src='https://res.cloudinary.com/dkfrxnaud/image/upload/v1745582633/luxury-min_n6epd0.jpg' alt='luxury-picture' />
                     </Link>
                     <div className='overlay'></div>
                 </div>
@@ -87,7 +87,7 @@ const HomePage = () => {
                 <div className='family'>
                     <h2>Family</h2>
                     <Link to='/family-packages' onClick={() => setActive("/family-packages")} className={active === "/family-packages" ? "active" : ""}>
-                        <img src='/assets/hompage/family.jpg' alt='family-picture' />
+                        <img src='https://res.cloudinary.com/dkfrxnaud/image/upload/v1745582641/family-min_epruhn.jpg' alt='family-picture' />
                     </Link>
                     <div className='overlay'></div>
                 </div>
@@ -96,7 +96,7 @@ const HomePage = () => {
                 <div className='solo'>
                     <h2>Solo travel</h2>
                     <Link to='/solo-packages' onClick={() => setActive("/solo-packages")} className={active === "/solo-packages" ? "active" : ""}>
-                        <img src='/assets/hompage/solo.jpg' alt='solo-picture' />
+                        <img src='https://res.cloudinary.com/dkfrxnaud/image/upload/v1745582632/solo-min_xkxdla.jpg' alt='solo-picture' />
                     </Link>
                     <div className='overlay'></div>
                 </div>
