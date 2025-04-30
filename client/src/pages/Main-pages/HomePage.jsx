@@ -131,9 +131,9 @@ const HomePage = () => {
 
                     Pay as You Travel – Users only pay for the days they actually travel and stay within the package, with flexibility to extend or shorten their trip.
                     Doorstep Pickup and Drop – Ensuring hassle-free transportation, this feature offers personalized pickup from the user’s location to the trip’s starting point and back.
-                    Customizable package – We at GoTo prioritizes customer more than us so If you want to plan your own trip we offer your trip plan in your hands.
+                    Customizable package – We at Destiny prioritizes customer more than us so If you want to plan your own trip we offer your trip plan in your hands.
 
-                    The project is headed by me Aravind, who leads the MERN stack development, ensuring a robust and efficient platform. I am supported by a talented team, including Jaya Srinivasan, Abimanyu, and Anand, each contributing different aspects of this project. Together, we aim to redefine the travel experience by integrating smart technology with user-friendly services, making trip planning more flexible, convenient, and cost-effective. GoTo is set to revolutionize how people book and experience travel, providing a tailored approach that prioritizes customer convenience.</p>
+                    The project is headed by me Aravind, who leads the MERN stack development, ensuring a robust and efficient platform. I am supported by a talented team, including Jaya Srinivasan, Abimanyu, and Anand, each contributing different aspects of this project. Together, we aim to redefine the travel experience by integrating smart technology with user-friendly services, making trip planning more flexible, convenient, and cost-effective. Destiny is set to revolutionize how people book and experience travel, providing a tailored approach that prioritizes customer convenience.</p>
             </section>
 
             {/* Testimonial */}
