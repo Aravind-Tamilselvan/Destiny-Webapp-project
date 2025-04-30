@@ -9,7 +9,7 @@ const Card = ({id,name,image,totalSlots,totalDays,totalCost,language,location,pa
     const year = date.getFullYear()
     return (
         <div className="card" tabIndex={`${id}`}>
-            <img src={`${image[0]}` || "/assets/GoTo.png"} className="card-image" alt={`${name}-image`}/>
+            <img src={`${image[0]}` || "/assets/Destiny.jpg"} className="card-image" alt={`${name}-image`}/>
             <div className="card-content">
                 <div className="card-heading">
                     <h3>{`${name}`}</h3>
