@@ -11,7 +11,7 @@ const TestimonialCard = ({review,id}) => {
 
     const isLiked = review.helpfulCount.includes(user?._id)
 
-    const ifReviewImage = review?.image.length ? review.image[0] : "/assets/GoTo.png"
+    const ifReviewImage = review?.image.length ? review.image[0] : "/assets/Destiny.jpg"
 
     const handleLike = (reviewId)=>{
         if(loading) return
