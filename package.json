@@ -1,5 +1,5 @@
 {
-  "name": "goto",
+  "name": "Destiny",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
@@ -11,7 +11,7 @@
   "author": "Aravind",
   "type": "module",
   "license": "ISC",
-  "description": "GoTo an innovative travel booking app",
+  "description": "Destiny an innovative travel booking app",
   "devDependencies": {
     "nodemon": "^3.1.9"
   },
