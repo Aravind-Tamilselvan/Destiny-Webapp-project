@@ -56,7 +56,7 @@ const TestimonialPage = () => {
                             </SwiperSlide>
                         ))) : (
                             <SwiperSlide style={{display:"flex",justifyContent:"center",alignItems:"center"}} >
-                                <img src='/assets/GoTo.png' alt='slider-image'/>
+                                <img src='/assets/Destiny.jpg' alt='slider-image'/>
                             </SwiperSlide>
                         )}
                     </Swiper>
