@@ -1,0 +1,171 @@
+{
+  "intents": [
+    {
+      "tag": "greeting",
+      "patterns": [
+        "Hi",
+        "Hey",
+        "Hello",
+        "Good day",
+        "Is anyone there?",
+        "Hi Destiny"
+      ],
+      "responses": [
+        "Hello! Welcome to Destiny 🌍 How can I help you plan your travel?",
+        "Hi there! Ready to explore your next destination with Destiny?",
+        "Hey! I’m here to help you book your perfect trip."
+      ]
+    },
+    {
+      "tag": "about_destiny",
+      "patterns": [
+        "What is Destiny?",
+        "Tell me about Destiny",
+        "What does Destiny app do?",
+        "Explain Destiny travel app"
+      ],
+      "responses": [
+        "Destiny is an innovative travel booking app offering personalized, flexible, and immersive travel experiences.",
+        "Destiny helps you explore, customize, and book trips with features like VR hotel previews and pay-as-you-travel."
+      ]
+    },
+    {
+      "tag": "tech_stack",
+      "patterns": [
+        "What technology is used?",
+        "Which tech stack do you use?",
+        "Is Destiny built using MERN?",
+        "What backend does your chatbot use?"
+      ],
+      "responses": [
+        "Destiny uses the MERN stack for the web app and FastAPI with NLP for chatbot services.",
+        "Our platform is built using MERN stack along with an AI-powered NLP chatbot using FastAPI."
+      ]
+    },
+    {
+      "tag": "features",
+      "patterns": [
+        "What features do you have?",
+        "Tell me Destiny features",
+        "What makes Destiny unique?",
+        "Why should I use Destiny?"
+      ],
+      "responses": [
+        "Destiny offers VR hotel room experiences, travel reviews, doorstep pickup, pay-as-you-travel, and customizable packages.",
+        "You can preview hotels in VR, customize trips, and pay only for the days you travel with Destiny."
+      ]
+    },
+    {
+      "tag": "package_categories",
+      "patterns": [
+        "What travel packages are available?",
+        "Show me package categories",
+        "What types of trips do you offer?"
+      ],
+      "responses": [
+        "We offer Adventure, Family, Luxury, and Solo Travel packages.",
+        "Our travel packages are categorized into Adventure, Family, Luxury, and Solo travel experiences."
+      ]
+    },
+    {
+      "tag": "adventure_packages",
+      "patterns": [
+        "Adventure packages",
+        "Show adventure trips",
+        "Do you have adventure travel?"
+      ],
+      "responses": [
+        "Customizable adventure packages include Kerala Trip and Andaman Scuba Diving.",
+        "Non-customizable adventure packages include Rishikesh Adventure Package and Spiti Valley Off-road Bike Travel."
+      ]
+    },
+    {
+      "tag": "family_packages",
+      "patterns": [
+        "Family packages",
+        "Show family tours",
+        "Family travel options"
+      ],
+      "responses": [
+        "Customizable family packages include Disneyland Paris Family Tour and Japan Cherry Blossom Family Tour.",
+        "Non-customizable family packages include Kerala Houseboat Travel and Singapore Universal Studios Tour."
+      ]
+    },
+    {
+      "tag": "luxury_packages",
+      "patterns": [
+        "Luxury packages",
+        "Show luxury trips",
+        "High-end travel options"
+      ],
+      "responses": [
+        "Customizable luxury packages include Maldives Over-water Villa Escape and Bali 5-Star Retreat.",
+        "Non-customizable luxury packages include Dubai Ultra High-Luxury Stay and Swiss Alps Premium Experience."
+      ]
+    },
+    {
+      "tag": "solo_packages",
+      "patterns": [
+        "Solo travel packages",
+        "Trips for solo travelers",
+        "Solo adventure options"
+      ],
+      "responses": [
+        "Customizable solo travel packages include Varkala Solo Trekking and Exploring Japan’s Temples and Traditions.",
+        "Non-customizable solo packages include Backpacking Through Vietnam and Himalayan Solo Trekking."
+      ]
+    },
+    {
+      "tag": "payment_model",
+      "patterns": [
+        "How does payment work?",
+        "What is pay as you travel?",
+        "Do I need to pay full amount?"
+      ],
+      "responses": [
+        "With Destiny, you only pay for the days you travel. No upfront full payment required.",
+        "Our pay-as-you-travel model ensures flexible and transparent pricing."
+      ]
+    },
+    {
+      "tag": "vr_experience",
+      "patterns": [
+        "Do you offer VR hotel view?",
+        "Can I see hotels before booking?",
+        "Virtual hotel experience"
+      ],
+      "responses": [
+        "Yes! Destiny offers VR hotel room experiences so you can explore before booking.",
+        "You can preview hotel rooms in virtual reality for a better booking decision."
+      ]
+    },
+    {
+      "tag": "goodbye",
+      "patterns": [
+        "Bye",
+        "Goodbye",
+        "See you later",
+        "Exit"
+      ],
+      "responses": [
+        "Goodbye! Hope to see you again on Destiny ✈️",
+        "Have a great day and happy travels!",
+        "Bye! Come back anytime to plan your next trip."
+      ]
+    },
+    {
+      "tag": "thanks",
+      "patterns": [
+        "Thanks",
+        "Thank you",
+        "That's helpful",
+        "Thanks a lot"
+      ],
+      "responses": [
+        "You're welcome! 😊",
+        "Happy to help you plan your journey!",
+        "Anytime! Let me know if you need travel suggestions."
+      ]
+    }
+  ]
+}

@@ -1,10 +1,9 @@
-import React, { useEffect, useState } from 'react'
-import { useRef } from 'react'
+import React, { useEffect, useState, useRef } from 'react'
 import "./ChatBot.css"
 import { IoChatbubblesOutline } from "react-icons/io5";
 import { IoMdSend } from "react-icons/io";
 import useUser from '../hooks/useUser';
-
+import { useChatMutation } from '../hooks/useChatMutation';
 
 const ChatBot = () => {
     const { user } = useUser()
@@ -14,91 +13,53 @@ const ChatBot = () => {
     const chatboxRef = useRef(null)
     const inputRef = useRef(null)
 
+    const { mutate, isPending } = useChatMutation()
+
     useEffect(() => {
-        if (messages.length === 0) {
-            const welcomeMessage = {
-                name: "Abimanyu",
-                message: "Hello! I am Abimanyu, How can I help you?"
-            };
-            setMessages([welcomeMessage]);
-        }
+        const welcomeMessage = {
+            name: "Abimanyu",
+            message: "Hello! I am Abimanyu, How can I help you?"
+        };
+        setMessages([welcomeMessage]);
     }, [])
 
-    const handleMessage = async () => {
+    const handleMessage = () => {
         const text = inputRef.current.value;
-        if (!text) return;
+        if (!text.trim()) return;
 
-        const newUserChat = { name: `${user.name}`, message: text };
-        setMessages((prevMessage) => [...prevMessage, newUserChat]);
+        const userMessage = { name: user.name, message: text };
+        setMessages(prev => [...prev, userMessage]);
         inputRef.current.value = "";
 
-        try {
-            const response = await fetch("https://openrouter.ai/api/v1/chat/completions", {
-                method: "POST",
-                headers: {
-                    Authorization: `Bearer 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`,
-                    "Content-Type": "application/json",
-                },
-                body: JSON.stringify({
-                    model: "deepseek/deepseek-chat-v3-0324:free",
-                    messages: [
-                        {
-                            role: "user",
-                            content: text
-                        }
-                    ]
-                })
-            });
-
-
-            if (!response.ok) {
-                const errorText = await response.text(); // to debug non-JSON error
-                console.error("Non-200 response from deepseek:", response.status, errorText);
-                throw new Error(`API error: ${response.status}`);
+        mutate(text, {
+            onSuccess: (data) => {
+                const botMessage = {
+                    name: "Abimanyu",
+                    message: data.reply || "Sorry, I couldn't understand that."
+                };
+                setMessages(prev => [...prev, botMessage]);
+            },
+            onError: () => {
+                setMessages(prev => [
+                    ...prev,
+                    {
+                        name: "Abimanyu",
+                        message: "Oops! Something went wrong. Please try again later."
+                    }
+                ]);
             }
-
-            const res = await response.json();
-            console.log("Chatbot response ", res)
-
-            const chatResponse = res.choices?.[0]?.message?.content
-            const botMessage = chatResponse ||
-                "Sorry, I couldn't generate a response.";
-
-            const newBotMessage = { name: "Abimanyu", message: botMessage };
-            setMessages((prevMessage) => [...prevMessage, newBotMessage]);
-        } catch (err) {
-            console.error("CHATBOT API error:", err.message);
-            const errorBotMessage = {
-                name: "Abimanyu",
-                message: "Oops! Something went wrong. Please try again later.",
-            };
-            setMessages((prevMessage) => [...prevMessage, errorBotMessage]);
-        }
+        });
     }
 
     const handleState = (e) => {
         e.preventDefault()
-        setState((prev) => !prev)
-        try {
-            if (!state) {
-                chatboxRef.current.classList.add('chatbox--active')
-            } else {
-                chatboxRef.current.classList.remove('chatbox--active')
-            }
-        } catch (error) {
-            console.log(chatboxRef.current)
-            console.error(error.message)
-        }
+        setState(prev => !prev)
+        chatboxRef.current?.classList.toggle('chatbox--active')
     }
 
     const handleKeyPress = (e) => {
-        if (e.key === 'Enter') {
-            handleMessage()
-        }
+        if (e.key === 'Enter') handleMessage()
     }
-
-    useEffect(() => {
-    }, [messages])
 
     return (
         <div className="chatbox-container">
@@ -106,26 +67,52 @@ const ChatBot = () => {
                 <div className="chatbox__support" ref={chatboxRef}>
                     <div className="chatbox__header">
                         <div className="chatbox__image--header">
-                            <img src="/assets/chatbot-modified.png" alt="image" />
+                            <img src="/assets/chatbot-modified.png" alt="chatbot" />
                         </div>
                         <div className="chatbox__content--header">
                             <h4 className="chatbox__heading--header">Chat support</h4>
                         </div>
                     </div>
+
                     <div className="chatbox__messages">
-                        {messages.slice().reverse().map((message, index) => (
-                            <div key={index} className={`messages__item messages__item--${message.name === "Abimanyu" ? "visitor" : "operator"}`}>
-                                {message.message}
+                        {messages.slice().reverse().map((msg, i) => (
+                            <div
+                                key={i}
+                                className={`messages__item messages__item--${msg.name === "Abimanyu" ? "visitor" : "operator"}`}
+                            >
+                                {msg.message}
                             </div>
                         ))}
+
+                        {isPending && (
+                            <div className="messages__item messages__item--visitor">
+                                Typing...
+                            </div>
+                        )}
                     </div>
+
                     <div className="chatbox__footer">
-                        <input type="text" placeholder="Write a message..." ref={inputRef} onKeyDown={handleKeyPress} />
-                        <button className="chatbox__send--footer send__button" onClick={handleMessage}><IoMdSend /></button>
+                        <input
+                            type="text"
+                            placeholder="Write a message..."
+                            ref={inputRef}
+                            onKeyDown={handleKeyPress}
+                            disabled={isPending}
+                        />
+                        <button
+                            className="chatbox__send--footer send__button"
+                            onClick={handleMessage}
+                            disabled={isPending}
+                        >
+                            <IoMdSend />
+                        </button>
                     </div>
                 </div>
+
                 <div className="chatbox__button">
-                    <button onClick={handleState}><IoChatbubblesOutline /></button>
+                    <button onClick={handleState}>
+                        <IoChatbubblesOutline />
+                    </button>
                 </div>
             </div>
         </div>

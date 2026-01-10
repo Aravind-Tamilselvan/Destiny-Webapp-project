@@ -7,6 +7,7 @@ import connectDB from "./lib/connectDB.js"
 import authRoutes from "./routes/auth.route.js"
 import packageRoutes from "./routes/package.route.js"
 import paymentRoutes from "./routes/booking.route.js"
+import chatRoutes from "./routes/chatbot.route.js"
 
 import path from "path"
 
@@ -32,6 +33,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use("/api/auth",authRoutes)
 app.use("/api/package",packageRoutes)
 app.use("/api/payments",paymentRoutes)
+app.use('/api/chat',chatRoutes)
 
 if(process.env.NODE_ENV === "production"){
     app.use(express.static(path.join(__dirname,"/client/dist")))

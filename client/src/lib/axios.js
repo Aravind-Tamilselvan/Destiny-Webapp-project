@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const axiosInstance = axios.create({
-	baseURL: import.meta.mode === "development" ? "http://localhost:7000/api" : window.location.origin + "/api",
+	baseURL: import.meta.env.mode === "development" ? "http://localhost:7000/api" : window.location.origin + "/api",
 	withCredentials: true, // send cookies to the server
 });
 
