@@ -40,13 +40,16 @@ const ChatBot = () => {
                 setMessages(prev => [...prev, botMessage]);
             },
             onError: () => {
-                setMessages(prev => [
-                    ...prev,
-                    {
-                        name: "Abimanyu",
-                        message: "Oops! Something went wrong. Please try again later."
-                    }
-                ]);
+                setTimeout(()=>{
+                    setMessages(prev => [
+                        ...prev,
+                        {
+                            name: "Abimanyu",
+                            message: "Oops! Something went wrong. Please try again later."
+                        }
+                    ]);
+                },5000)
+                
             }
         });
     }
@@ -75,7 +78,7 @@ const ChatBot = () => {
                     </div>
 
                     <div className="chatbox__messages">
-                        {messages.slice().reverse().map((msg, i) => (
+                        {messages.slice().map((msg, i) => (
                             <div
                                 key={i}
                                 className={`messages__item messages__item--${msg.name === "Abimanyu" ? "visitor" : "operator"}`}
